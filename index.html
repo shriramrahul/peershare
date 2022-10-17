@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>P2P File Sharing</title>
+
+    <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2/qrcode.min.js"></script>
+    <link rel="stylesheet" defer type="text/css" href="dist/loading-bar.css"/>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" defer rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> 
+    <script type="text/javascript" defer src="/dist/loading-bar.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<!-- <body class="text-center bg-dark text-white"> -->
+    <body class="text-center">    
+    <h1 class="my-5">Your Share ID  🪪  is : <span class="text-primary" id="idField"></span></h1>
+    <div class="grid-container container ">
+        <div class="row">
+
+            <div class="recieve-container col">
+                
+                <div class="py-5 px-auto border" id="recieveBox">
+                    <!-- <form action="" > -->
+                        <h3>Enter Sender's Share ID: </h3>
+                        <input type="number" name="shareID" id="shareID">
+                        <button class="recieve-btn btn btn-primary m-3" id="recieve-btn">
+                            Recieve ⬇️
+                        </button>
+                    <!-- </form> -->
+                    <div class="progress mx-5">
+                        <div class="progress-bar" id="progress-bar" role="progressbar" style="width: 0%;" >0%</div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="send-container col ">
+                <input type="file" class="send-btn btn btn-warning m-3" multiple id="file-input" />
+                <br>
+                <button class="btn btn-primary m-3" id="send-btn">Send ⬆️</button>
+            </div>
+            
+        </div>
+        <div class="row m-5 text-center">
+            <h4>Status 👇 </h4>
+            
+            <div id="status-messages">
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
